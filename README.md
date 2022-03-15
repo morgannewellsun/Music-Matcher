@@ -14,7 +14,7 @@ Use Case 2. I have, on several occasions, accidently downloaded multiple copies 
 
 1. Place the music in set A into one directory, and the music in set B into another. Also create a directory for the script to save output files.
 2. Modify lines 16-18 in `src/main.py`, as well as lines 13-15 in `src/intersection_and_union.py`, to match these directories.
-3. Run `src/main.py`. No arguments are necessary. This will take a long time if you have a large (hundreds or thousands of files) library.
+3. Run `src/main.py`. No arguments are necessary. This will take a long time if you have a large (hundreds or thousands of files) library. There are several "checkpoints" where data is saved after computationally intensive operations; look at the code for more details.
 4. Copy `OUTPUT_DIRECTORY/matches.csv` to `OUTPUT_DIRECTORY/matches_modified.csv`.
 5. Inspect `OUTPUT_DIRECTORY/matches_modified.csv`. Each row represents a match between set A and set B. Matches are sorted by decreasing confidence, which means erroneous matches will be located at the bottom of the file. Delete rows containing these erroneous matches.
 6. Run `src/intersection_and_union.py`. This will generate four subdirectories in the output directory. `OUTPUT_DIRECTORY/dir_a_matched/` and `OUTPUT_DIRECTORY/dir_b_matched` contain the audio files which were successfully matched; you can delete whichever directory contains inferior-quality files. `OUTPUT_DIRECTORY/dir_a_unmatched` and `OUTPUT_DIRECTORY/dir_b_unmatched` contain audio which was found to exist only in set A or only in set B, respectively.
@@ -28,3 +28,4 @@ WIP
 
 - workflow for use case 2
 - further improve robustness to differences in volume
+- better progress reporting for chroma_cens computations
