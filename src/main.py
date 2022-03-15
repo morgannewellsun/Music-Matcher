@@ -13,9 +13,9 @@ import pandas as pd
 # =============================================================================
 
 # directory paths
-dir_a_directory = "D:\\Large Files\\Youtube-DLG\\"
-dir_b_directory = "D:\\Music\\Assorted Weeaboo Music\\"
-output_directory = "D:\\"
+dir_a_directory = "FILL\\ME\\IN\\"
+dir_b_directory = "FILL\\ME\\IN\\"
+output_directory = "FILL\\ME\\IN\\"
 
 # hyperparameters and options
 duration_tolerance_seconds = 0.5
