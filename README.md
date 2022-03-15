@@ -18,7 +18,7 @@ Use Case 2. I have, on several occasions, accidently downloaded multiple copies 
 4. Copy `OUTPUT_DIRECTORY/matches.csv` to `OUTPUT_DIRECTORY/matches_modified.csv`.
 5. Inspect `OUTPUT_DIRECTORY/matches_modified.csv`. Each row represents a match between set A and set B. Matches are sorted by decreasing confidence, which means erroneous matches will be located at the bottom of the file. Delete rows containing these erroneous matches.
 6. Run `src/intersection_and_union.py`. This will generate four subdirectories in the output directory. `OUTPUT_DIRECTORY/dir_a_matched/` and `OUTPUT_DIRECTORY/dir_b_matched` contain the audio files which were successfully matched; you can delete whichever directory contains inferior-quality files. `OUTPUT_DIRECTORY/dir_a_unmatched` and `OUTPUT_DIRECTORY/dir_b_unmatched` contain audio which was found to exist only in set A or only in set B, respectively.
-7. As the algorithm is not perfect, there may be a very small number (~0.5% in my experience) of cases where two files containing identical audio fail to be matched. Depending on how much you care about avoiding duplicate audio files, you may wish to manually check for these cases.
+7. As the algorithm is not perfect, there may be a very small number (~0.5% in my experience) of cases where two files containing identical audio fail to be matched. Depending on how much you care about avoiding duplicate audio files, you may wish to manually check for these cases by looking at the files in `OUTPUT_DIRECTORY/dir_a_unmatched` and `OUTPUT_DIRECTORY/dir_b_unmatched`.
 
 # Workflow for Use Case 2:
 
